@@ -17,9 +17,8 @@ export default function Home() {
 
       <main className={styles.main}>
         <Hero />
-        
-          <Search />
-        
+
+        <Search />
       </main>
     </div>
   );
