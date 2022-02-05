@@ -1,33 +1,41 @@
-import React, { useEffect, useState } from 'react';
+/* eslint-disable @next/next/no-img-element */
+import React, { useEffect, useState, useRef } from "react";
 
 const Header = () => {
-  const [offset, setOffset] = useState(0);
+  const headerRef = useRef();
   useEffect(() => {
-    const onScroll = () => setOffset(window.pageYOffset);
+    const onScroll = () => {
+      if (window.scrollY > 10) {
+        headerRef.current.classList.add("bg-white");
+        headerRef.current.classList.add("shadow-light");
+        headerRef.current.classList.remove("text-white");
+      } else {
+        headerRef.current.classList.remove("bg-white");
+        headerRef.current.classList.remove("shadow-light");
+        headerRef.current.classList.add("text-white");
+      }
+    };
+
     // clean up code
-    window.removeEventListener('scroll', onScroll);
-    window.addEventListener('scroll', onScroll, { passive: true });
-    return () => window.removeEventListener('scroll', onScroll);
+    window.removeEventListener("scroll", onScroll);
+    window.addEventListener("scroll", onScroll, { passive: true });
+    return () => window.removeEventListener("scroll", onScroll);
   }, []);
 
-  function handleScroll(e) {
-    scrollClass = 'Feed scrolling';
-  }
-
-  console.log(offset);
   return (
     <header
-      className="text-white body-font fixed z-10 w-full"
+      className="body-font fixed z-10 w-full text-white transition"
       onScroll={(e) => handleScroll(e)}
+      ref={headerRef}
     >
-      <div className="mx-auto flex flex-wrap p-5 flex-col md:flex-row items-center">
-        <a className="flex title-font font-medium items-center text-gray-900 mb-4 md:mb-0">
+      <div className="mx-auto flex flex-col flex-wrap items-center p-5 md:flex-row">
+        <a className="title-font mb-4 flex items-center font-medium text-gray-900 md:mb-0">
           <img
             src="https://res.cloudinary.com/dsafp5nqg/image/upload/v1644055068/logo-crop_sbccyp.png"
             alt="logo"
           />
         </a>
-        <nav className="md:ml-auto flex flex-wrap items-center text-base justify-center">
+        <nav className="flex flex-wrap items-center justify-center text-base md:ml-auto">
           <a className="mr-5 hover:text-gray-900">Buy</a>
           <a className="mr-5 hover:text-gray-900">Sell</a>
           <a className="mr-5 hover:text-gray-900">Search</a>
