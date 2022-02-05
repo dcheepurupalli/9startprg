@@ -34,7 +34,7 @@ const Header = () => {
     <header
       className="body-font fixed z-10 w-full text-white transition duration-[250] ease-in-out py-4"
       onScroll={(e) => handleScroll(e)}
-      style={{ "transition": "all 0.3s ease-in-out 0s", "willChange": "transform", backdropFilter:"saturate(150%) blur(25px)"}}
+      style={{ "transition": "all 0.3s ease-in-out 0s", "willChange": "transform"}}
       ref={headerRef}
     >
       <div className="mx-auto flex flex-col flex-wrap items-center p-5 md:flex-row">
@@ -45,7 +45,7 @@ const Header = () => {
             className="h-10"
           />
         </a>
-        <nav className="flex flex-wrap items-center justify-center text-base md:ml-auto">
+        <nav className="flex flex-wrap items-center justify-center text-sm font-semibold md:ml-auto uppercase">
           <a className="mr-16 hover:text-gray-400">Buy</a>
           <a className="mr-16 hover:text-gray-400">Sell</a>
           <a className="mr-16 hover:text-gray-400">Search</a>
