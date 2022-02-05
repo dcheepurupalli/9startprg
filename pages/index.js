@@ -1,5 +1,6 @@
 import Head from "next/head";
 import Hero from "../components/hero";
+import Search from "../components/search";
 import styles from "../styles/Home.module.css";
 
 export default function Home() {
@@ -16,6 +17,9 @@ export default function Home() {
 
       <main className={styles.main}>
         <Hero />
+        
+          <Search />
+        
       </main>
     </div>
   );
