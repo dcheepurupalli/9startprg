@@ -6,8 +6,8 @@ const hero = () => {
         className="slide carousel relative"
         data-bs-ride="carousel"
       >
-        <div className="carousel-inner relative w-full overflow-hidden">
-          <div className="carousel-item active relative float-left w-full">
+        <div className="carousel-inner relative aspect-auto h-[90vh] w-full overflow-hidden">
+          <div className="carousel-item active relative float-left  w-full">
             <img
               src="https://images.unsplash.com/photo-1549517045-bc93de075e53?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2000&h=1000&q=100"
               className="block w-full"

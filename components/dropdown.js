@@ -1,14 +1,14 @@
-import { Fragment, useState } from "react";
-import { Listbox, Transition } from "@headlessui/react";
-import { CheckIcon, SelectorIcon } from "@heroicons/react/solid";
+import { Fragment, useState } from 'react';
+import { Listbox, Transition } from '@headlessui/react';
+import { CheckIcon, SelectorIcon } from '@heroicons/react/solid';
 
 const people = [
-  { name: "Wade Cooper" },
-  { name: "Arlene Mccoy" },
-  { name: "Devon Webb" },
-  { name: "Tom Cook" },
-  { name: "Tanya Fox" },
-  { name: "Hellen Schmidt" },
+  { name: 'Wade Cooper' },
+  { name: 'Arlene Mccoy' },
+  { name: 'Devon Webb' },
+  { name: 'Tom Cook' },
+  { name: 'Tanya Fox' },
+  { name: 'Hellen Schmidt' },
 ];
 
 export default function Example() {
@@ -38,7 +38,7 @@ export default function Example() {
                 <Listbox.Option
                   key={personIdx}
                   className={({ active }) =>
-                    `${active ? "bg-amber-100 text-amber-900" : "text-gray-900"}
+                    `${active ? 'bg-amber-100 text-amber-900' : 'text-gray-900'}
                           relative cursor-default select-none py-2 pl-10 pr-4`
                   }
                   value={person}
@@ -47,7 +47,7 @@ export default function Example() {
                     <>
                       <span
                         className={`${
-                          selected ? "font-medium" : "font-normal"
+                          selected ? 'font-medium' : 'font-normal'
                         } block truncate`}
                       >
                         {person.name}
@@ -55,7 +55,7 @@ export default function Example() {
                       {selected ? (
                         <span
                           className={`${
-                            active ? "text-amber-600" : "text-amber-600"
+                            active ? 'text-amber-600' : 'text-amber-600'
                           }
                                 absolute inset-y-0 left-0 flex items-center pl-3`}
                         >
