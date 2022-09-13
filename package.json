@@ -16,7 +16,7 @@
     "tw-elements": "1.0.0-alpha12"
   },
   "devDependencies": {
-    "autoprefixer": "10.4.9",
+    "autoprefixer": "10.4.10",
     "eslint": "8.23.1",
     "eslint-config-next": "12.3.0",
     "postcss": "8.4.16",
